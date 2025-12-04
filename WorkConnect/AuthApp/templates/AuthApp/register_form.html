@@ -1,0 +1,24 @@
+{% extends "main.html" %}
+{% block content %}
+
+<h2>{{ title }}</h2>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">
+        Register as {{ title|slice:":-12" }} <!-- removes the word "Registration" -->
+    </button>
+</form>
+
+ <p>
+    Already have an account? <a href="{% url 'login' %}">Login here</a>
+</p> 
+<br>
+
+
+{% endblock %} 
+
+
