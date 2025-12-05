@@ -18,3 +18,5 @@ Use the Django CLI to create a new project:
 -django-admin startproject WorkConnect
 
 This generates a new folder named WorkConnect containing the main project files.
+Creating Django Applications
+--python manage.py startapp
